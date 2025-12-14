@@ -4,6 +4,7 @@
   <title>Results</title>
 </head>
 <body>
+{% if data and data|length > 0 %}
   <table border="1">
     <tr>
       {% for key in data[0].keys() %}
@@ -18,5 +19,8 @@
       </tr>
     {% endfor %}
   </table>
+{% else %}
+  <p><em>No data submitted yet.</em></p>
+{% endif %}
 </body>
 </html>

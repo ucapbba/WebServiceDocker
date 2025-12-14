@@ -10,6 +10,7 @@ def submit():
     DATA.append(json_data)
     return {"status": "ok"}
 
+
 @app.route("/")
 def index():
     return render_template("table.html", data=DATA)
